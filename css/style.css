@@ -1,0 +1,620 @@
+/* 'Playpen Sans' */
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@800&display=swap');
+
+ /* * {
+	outline: 1px solid red;
+}  */
+
+:root {
+	font-size: 16px;
+}
+
+html {
+	scroll-behavior: smooth;
+	margin: 0 auto;
+	cursor: url("../images/cursors/dog-cursor.png") 16 16, auto;
+} 
+
+.header {
+	max-width: 1600px;
+	background-image: url("../images/raster/man-and-his-dog-upper-echo-lake.jpeg");
+	background-size: cover; /* Fill the entire container */
+	background-position: center; /* Center background along X- and Y-axes */
+}
+
+.header-info {		
+	display: flex; /* Use Flexbox */
+	padding: 1rem;
+	overflow: hidden;
+	box-sizing: border-box; /* Ensure padding is included within defined width */
+	justify-content: center;
+	align-items: center;
+}
+
+#header-logo {
+	width: 15vw;
+	padding: 1rem 1rem 1rem 0; /* Add padding on all sides */
+	
+}
+
+.header-tags h1, .header-tags h2 {
+	font-family: 'Playpen Sans';
+	color: #80af1e;
+	text-shadow: 0.1rem 0.1rem 1rem #031f3d; /* Define X- and Y-axis offset, blur radius, and color of text shadow */
+	font-size: 5vw;
+	margin: 0;
+}
+
+.header-tags h2 {
+	font-family: 'Playpen Sans';
+	font-size: 3.333vw;
+	margin: 0;
+}
+
+.trademark {
+	font-size: 1.25vw;
+}
+
+.nav-bar {
+	display: flex; /* Use Flexbox */
+	justify-content: center; /* Evenly space anchor tags */
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0.5rem 1rem 0.5rem 1rem;
+	background-color: rgba(3,31,61,0.8);
+	font-family: 'Playpen Sans';
+	font-size: 2.5vw;
+}
+
+.nav-bar a {
+	text-decoration: none; /* Remove Hyperlink Underline */
+	font-weight: 800;
+	color: #80af1e;
+	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer;
+	padding: 0 1rem;
+}
+
+.nav-bar a:hover {
+	text-decoration: underline; /* Add underline when hovered */
+	color: #00ffff;
+}
+
+
+/* Body ---------------------------------------------------- */
+body {
+	max-width: 1600px;
+	margin: 0 auto; /* Use 100% of the page */
+	background-image: url("../images/raster/dogs-playing-in-mountain-lake.png");
+	background-position: center bottom; /* Position background along X and Y axes */
+	background-attachment: fixed; /* Fix background while scrolling */
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.about-me-container {
+	max-width: 1000px;
+	margin: 1rem auto; /* Add margin */
+	display: block;
+}
+
+.avatar-container {
+	float: left;
+	margin-right: 2rem; /* Add space between the avatar image and info */
+	margin-bottom: 1rem;
+	max-width: 14rem;
+	
+}
+
+#avatar-image {
+	max-width: 100%; /* Make image responsive within container */
+	border: 0.25rem solid #80af1e; /* Define border width, style, and color */
+	box-shadow: 0.1rem 0.1rem 0.25rem #031f3d; /* Define X- and Y-axis offset, blur radius, and color of shadow */
+	display: block;
+	
+}
+
+.about-me-info {
+	background-color: rgba(3,31,61,0.8);
+	padding: 1rem;
+	text-align: justify;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 2rem;
+	color: #ffffff;
+	
+}
+
+.about-me-info h2 {
+	font-family: 'Playpen Sans';
+	color: #80af1e;
+	text-shadow: 0.1rem 0.1rem 0.5rem #031f3d; /* Define X- and Y-axis offset, blur radius, and color of text shadow */
+}
+
+.about-me-info a {
+	text-decoration: none; /* Remove Hyperlink Underline */
+	font-weight: 800;
+	color: #80af1e;
+	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer;
+}
+
+.about-me-info a:hover {
+	text-decoration: underline; /* Remove Hyperlink Underline */
+	font-weight: 800;
+	color: #00ffff;
+}
+
+
+/* Testimonials -------------------------------------------------- */
+.testimonial-area {
+	max-width: 1000px;
+	margin: 1rem auto; /* Add margin */
+	padding: 1rem 0 1rem 0;
+	color: #ffffff;
+	background-color: rgba(3,31,61,0.8);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 2rem;
+	
+}
+
+.testimonial-area h2 {
+	color: #80af1e;
+	text-shadow: 0.1rem 0.1rem 0.5rem #031f3d;
+	text-align: center;
+	font-family: 'Playpen Sans'; 
+	margin: 1rem 0 0 0;
+}
+
+.testimonials {
+	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	overflow: hidden;
+}
+
+.testimonial-list {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	width: 100%;
+	padding: 0;
+	transition: transform 0.3s ease-in-out;
+}
+
+.up-arrow, .down-arrow {
+	border: none;
+	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer;
+	background-color: transparent;
+	opacity: 0.5;
+}
+
+.down-arrow {
+	transform: rotate(180deg);
+}
+
+.up-arrow img, .down-arrow img {
+	width: 3rem;
+	height: 2rem;
+}
+
+.up-arrow:hover, .down-arrow:hover {
+	opacity: 1;
+	transform: scale(1.5, 1.5);
+	transition: transform 0.3s;
+}
+
+.down-arrow:hover {
+	transform: scale(1.5, 1.5) rotate(180deg);
+	transition: transform 0.3s;
+}
+
+.testimony {
+	width: 100%;
+	text-align: justify;
+	display: none; /* Hide by default */		
+	transition: opacity 0.3s ease-in-out;
+}
+
+.testimony.active {
+	display: block; /* Show when active */
+}
+
+.dog-paw-rating {
+	display: flex;
+	justify-content: center;
+}
+
+.dog-paw-rating img {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0 0.5rem 0 0.5rem;
+	background: radial-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0) 65%);
+	padding: 1rem;
+	mix-blend-mode: lighten;
+}
+
+.test-name {
+	color: #80af1e;
+	margin: 0;
+	text-align: right;
+}
+
+.test-date {
+	color: #ffffff;
+	font-size: 1rem; 
+	margin: 0.5rem 0 2rem 0; 
+	text-align: right;
+} 
+
+
+/* Image gallery -------------------------------------------------- */
+.image-gallery {
+	max-width: 1000px;
+	margin: 1rem auto;
+}
+
+.slideshow {
+	
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 1rem;
+	box-shadow: 0.1rem 0.1rem 0.25rem #031f3d;
+}
+
+.slideshow .slides {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.slideshow .slide {
+	min-width: 100%;
+	transition: opacity 0.3s;
+	position: relative;
+}
+
+.slide-image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 50vh;
+	border: solid 0.25rem #80af1e;
+}
+
+.slideshow .arrows {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+.slideshow .arrows .arrow {
+	background: transparent;
+	border: none;
+	width: 50%; 
+	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer;
+}
+
+.slideshow .arrows .arrow span {
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 2rem;
+	height: 3rem;
+	margin: 0;
+	opacity: 0.5;
+	transform: translateY(-1.5rem); 
+}
+
+.slideshow .arrows .arrow .arrow-next span {
+	cursor: url("../images/raster/paw-cursor.png") 16 16, pointer;
+}
+
+.slideshow .arrows .arrow span:hover {
+	opacity: 1;
+	transform: scale(1.5, 1.5) translateY(-1rem);
+	transition: transform 0.1s ease-in;
+}
+
+.slideshow .arrow-prev span {
+	position: absolute;
+	background-image: url('../images/svg/left-arrow.svg');
+	left: 3rem;
+}
+
+.slideshow .arrow-next span {
+	position: absolute;
+	background-image: url('../images/svg/right-arrow.svg');
+	right: 2.5rem;
+}
+
+/* Footer ------------------------------------------------ */
+footer {
+	max-width: 1600px;
+	background-color: rgba(3,31,61,0.8);
+	color: #ffffff;
+	margin: 0;
+	padding: 1rem;
+}
+
+.footer-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: 1rem;
+}
+
+.footer-bottom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+	gap: 1rem;
+}
+
+.contact {
+	display: flex;
+	font-size: 1.5rem;
+}
+
+address {
+	font-style: normal;
+}
+
+.sitemap__columns {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	font-size: 2.5vw;
+	justify-content: center;
+	font-family: 'Playpen Sans';
+}
+
+.sitemap__columns .column {
+	padding: 0 1rem;
+	line-height: 0.5rem;
+}
+
+.footer-container a {
+	color: #80af1e;
+	text-decoration: none;
+}
+
+.footer-container a:hover {
+	color: #00ffff;
+	text-decoration: underline;
+	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer;
+}
+
+.input-field, .message-field {
+	background-color: #031f3d;
+	color: #ffffff;
+	border: none;
+	padding: 0.5rem;
+	box-shadow: inset 0 0 0.25rem #00ffff;
+	font-size: 2.5vw;
+}
+
+.input-field:hover, .message-field:hover {
+	cursor: url("../images/cursors/bone-cursor.png"), text;
+}
+
+.input-field {
+	width: 90%;
+	margin-top: 0.25rem;
+}
+
+.message-field {
+	width: 90%;
+	margin-top: 0.25rem;
+}
+
+.input-field::placeholder, .message-field::placeholder {
+	color: #00ffff7f;
+}
+
+.submit-button {
+	background-color: transparent;
+	border: none;
+	font-family: 'Playpen Sans';
+	color: #80af1e;
+	font-size: 1.25rem;
+}
+
+.submit-button:hover {
+	color: #00ffff;
+	text-decoration: underline;
+	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer;
+}
+
+.credits h2 {
+	color: #80af1e;
+	font-family: 'Playpen Sans';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small screen devices ------------------------------------------------ */
+@media (max-width: 551px) {
+	.header {
+		background-position: center right 25%; /* NEW */
+		overflow: hidden;
+	}
+	
+	#header-logo {
+		width: 4.75rem; /* NEW */
+	}
+	
+	.header-tags h1 {
+		font-size: 1.57rem; /* NEW */
+	}	
+
+	.header-tags h2 {
+		font-size: calc(1.57rem / 1.5);
+	}
+
+	.trademark {
+		font-size: calc(1.57rem / 4)
+	}
+
+	.nav-bar a {
+		font-size: 0.785rem;
+		padding: 0 1rem;
+	}
+	
+	/* About me ---------------------------------------------------- */
+	.about-me-info {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+	.about-me-info h2 {
+		text-align: center;
+	}
+
+	.about-me-info h2 {
+		margin: 1rem 0 0 0;
+	}
+
+	.avatar-container {
+		display: flex;
+		align-self: center;
+		margin: 0;
+	}
+
+	/* Testimonials -------------------------------------------------- */
+	.testimonial-area h2 {
+		overflow: hidden;
+	}
+
+	.dog-paw-rating img {
+		width: 8.25vw;
+		height: 8.25vw;
+		padding: 3vw;
+	}
+	
+	/* Image gallery -------------------------------------------------- */
+	.slideshow .arrow-prev span {
+		left: 1rem;
+	}
+	
+	.slideshow .arrow-next span {
+		right: 0.5rem;
+	}
+
+	/* Footer -------------------------------------------------- */
+	footer {
+		overflow: hidden;
+	}
+	.footer-bottom {
+		flex-direction: column; /* NEW */
+	}
+
+	.sitemap__columns {
+		font-size: 0.785rem;
+	}
+
+	.contact form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.input-field, .message-field {
+		font-size: 0.9rem;
+	}
+
+	.message-field {
+		height: 5rem;
+	}
+
+	.credits {
+		text-align: center;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Large screen devices */
+@media (min-width: 1200px) {
+	.header-tags h1 {
+		font-size: 3.5rem;
+	}
+	
+	.header-tags h2 {
+		font-size: calc(3.75rem / 1.5);
+	}
+	
+	.trademark {
+		font-size: calc(3.75rem / 4);
+	}
+
+	#header-logo {
+		width: 11.25rem; 
+	}
+
+	.nav-bar {
+		font-size: 1.875rem;
+	}
+
+	.sitemap__columns {
+		font-size: 1.875rem;
+	}
+
+	.input-field, .message-field {
+		font-size: 1.875rem;
+	}
+}
+
+
+
+
+/* For browsers that support backdrop filtering */
+@supports (backdrop-filter: blur(1rem)) {
+	.nav-bar {
+		background-color: rgba(3,31,61,0.8);
+		backdrop-filter: blur(1rem); 
+	}
+	
+	.about-me-info { 
+		background-color: rgba(3,31,61,0.8);
+		backdrop-filter: blur(1rem); 
+	}
+
+	.testimonial-area {
+		background-color: rgba(3,31,61,0.8);
+		backdrop-filter: blur(1rem); 
+	}
+
+	footer {
+		background-color: rgba(3,31,61,0.8);
+		backdrop-filter: blur(1rem); 
+	}
+}
