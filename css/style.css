@@ -354,12 +354,15 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 1.25rem;
 	margin-bottom: 2rem;
 	gap: 1rem;
 }
 
-.contact {
-	display: flex;
+.contact h2 {
+	font-family: 'Playpen Sans';
+	color: #80af1e;
+	text-shadow: 0.1rem 0.1rem 0.5rem #031f3d;
 	font-size: 1.5rem;
 }
 
@@ -436,6 +439,8 @@ address {
 .credits h2 {
 	color: #80af1e;
 	font-family: 'Playpen Sans';
+	text-shadow: 0.1rem 0.1rem 0.5rem #031f3d;
+	font-size: 1.5rem;
 }
 
 
@@ -546,7 +551,7 @@ address {
 		height: 5rem;
 	}
 
-	.credits {
+	.footer-bottom {
 		text-align: center;
 	}
 }
