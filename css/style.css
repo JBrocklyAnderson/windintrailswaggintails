@@ -1,22 +1,34 @@
-/* 'Playpen Sans' */
+/* Import 'Playpen Sans' font family */
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@800&display=swap');
 
- /* * {
+ /* Outline elements for layout troubleshooting when necessary
+ * {
 	outline: 1px solid red;
 }  */
 
+/* Define keyframes animation */
+@keyframes oscillate {
+	0%, 100% { transform: scale(1, 1); }
+	12.5% { transform: scale(1.5, 0.5); } /* Squeeze hard vertically */
+	37.5% { transform: scale(0.5, 1.5); } /* Squeeze hard horizontally */
+	62.5% { transform: scale(1.25, 0.75); } /* Squeeze soft vertically */
+	87.5% { transform: scale(0.75, 1.25); } /* Squeeze soft horizontally */
+}
+
+/* Set root font size */
 :root {
 	font-size: 16px;
 }
 
+/* Set default margins, cursor, and scroll behavior */
 html {
 	scroll-behavior: smooth;
 	margin: 0 auto;
-	cursor: url("../images/cursors/dog-cursor.png") 16 16, auto;
+	cursor: url("../images/cursors/dog-cursor.png") 16 16, auto; /* Set cursor focal point */
 } 
 
 .header {
-	max-width: 1600px;
+	max-width: 1600px; /* Prevent background from filling screen width on large screens */
 	background-image: url("../images/raster/man-and-his-dog-upper-echo-lake.jpeg");
 	background-size: cover; /* Fill the entire container */
 	background-position: center; /* Center background along X- and Y-axes */
@@ -25,16 +37,18 @@ html {
 .header-info {		
 	display: flex; /* Use Flexbox */
 	padding: 1rem;
-	overflow: hidden;
 	box-sizing: border-box; /* Ensure padding is included within defined width */
-	justify-content: center;
-	align-items: center;
+	justify-content: center; /* Align items horizontally */
+	align-items: center; /* Align items vertically */
 }
 
 #header-logo {
-	width: 15vw;
-	padding: 1rem 1rem 1rem 0; /* Add padding on all sides */
-	
+	width: 15vw; /* Set responsive sizing parameter */
+	padding: 1rem 1rem 1rem 0; /* Add padding on all but right side */
+}
+
+#header-logo:hover {
+	animation: oscillate 1.2s ease forwards; /* Use `oscillate` */
 }
 
 .header-tags h1, .header-tags h2 {
@@ -57,9 +71,9 @@ html {
 
 .nav-bar {
 	display: flex; /* Use Flexbox */
-	justify-content: center; /* Evenly space anchor tags */
-	align-items: center;
-	flex-wrap: wrap;
+	justify-content: center; /* Center anchor tags */
+	align-items: center; /* Align them vertically in the navigation bar */
+	flex-wrap: wrap; /* Allow row wrapping */
 	padding: 0.5rem 1rem 0.5rem 1rem;
 	background-color: rgba(3,31,61,0.8);
 	font-family: 'Playpen Sans';
@@ -67,15 +81,15 @@ html {
 }
 
 .nav-bar a {
-	text-decoration: none; /* Remove Hyperlink Underline */
+	text-decoration: none; /* Remove hyperlink underline from links */
 	font-weight: 800;
 	color: #80af1e;
-	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer;
+	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer; /* Set pointer cursor for links and buttons */
 	padding: 0 1rem;
 }
 
 .nav-bar a:hover {
-	text-decoration: underline; /* Add underline when hovered */
+	text-decoration: underline; /* Add underline to links when hovered */
 	color: #00ffff;
 }
 
@@ -83,34 +97,33 @@ html {
 /* Body ---------------------------------------------------- */
 body {
 	max-width: 1600px;
-	margin: 0 auto; /* Use 100% of the page */
-	background-image: url("../images/raster/dogs-playing-in-mountain-lake.png");
+	margin: 0 auto; /* Center elements horizontally */
+	background-image: url("../images/raster/dogs-playing-in-mountain-lake.png"); /* Set background */
 	background-position: center bottom; /* Position background along X and Y axes */
 	background-attachment: fixed; /* Fix background while scrolling */
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-repeat: no-repeat; /* Avoid repeating */
+	background-size: cover; /* Stretch to fill screen */
 }
 
 
 .about-me-container {
-	max-width: 1000px;
+	max-width: 1000px; /* Disallow width to flush with header */
 	margin: 1rem auto; /* Add margin */
-	display: block;
+	display: block; /* Set block display for floating child */ 
 }
 
 .avatar-container {
-	float: left;
+	float: left; /* Float image container around text */
 	margin-right: 2rem; /* Add space between the avatar image and info */
-	margin-bottom: 1rem;
-	max-width: 14rem;
-	
+	margin-bottom: 1rem; /* Prevent text from hitting image bottom */
+	max-width: 14rem; /* Prevent oversizing */
 }
 
 #avatar-image {
-	max-width: 100%; /* Make image responsive within container */
+	max-width: 100%; /* Keep image within container */
 	border: 0.25rem solid #80af1e; /* Define border width, style, and color */
 	box-shadow: 0.1rem 0.1rem 0.25rem #031f3d; /* Define X- and Y-axis offset, blur radius, and color of shadow */
-	display: block;
+	display: block; /* Keep image floating */
 	
 }
 
@@ -131,14 +144,14 @@ body {
 }
 
 .about-me-info a {
-	text-decoration: none; /* Remove Hyperlink Underline */
+	text-decoration: none; 
 	font-weight: 800;
 	color: #80af1e;
 	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer;
 }
 
 .about-me-info a:hover {
-	text-decoration: underline; /* Remove Hyperlink Underline */
+	text-decoration: underline; 
 	font-weight: 800;
 	color: #00ffff;
 }
@@ -146,14 +159,13 @@ body {
 
 /* Testimonials -------------------------------------------------- */
 .testimonial-area {
-	max-width: 1000px;
-	margin: 1rem auto; /* Add margin */
+	max-width: 1000px; /* Disallow width to flush with header */
+	margin: 1rem auto; 
 	padding: 1rem 0 1rem 0;
 	color: #ffffff;
 	background-color: rgba(3,31,61,0.8);
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	font-size: 2rem;
-	
 }
 
 .testimonial-area h2 {
@@ -167,26 +179,25 @@ body {
 .testimonials {
 	margin: 1rem;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	flex-direction: column; /* Stack child elements */
+	align-items: center; /* Center horizontally */
+	justify-content: center; /* Center vertically */
 	padding: 1rem;
-	overflow: hidden;
 }
 
 .testimonial-list {
 	display: flex;
 	flex-direction: column;
-	list-style: none;
+	list-style: none; /* Remove bullet points */
 	width: 100%;
 	padding: 0;
-	transition: transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out; /* Add transition for script interactivity */
 }
 
 .up-arrow, .down-arrow {
-	border: none;
+	border: none; /* Remove borders from buttons */
 	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer;
-	background-color: transparent;
+	background-color: transparent; 
 	opacity: 0.5;
 }
 
@@ -201,7 +212,7 @@ body {
 
 .up-arrow:hover, .down-arrow:hover {
 	opacity: 1;
-	transform: scale(1.5, 1.5);
+	transform: scale(1.5, 1.5); /* Enlarge buttons when hovered */
 	transition: transform 0.3s;
 }
 
@@ -212,13 +223,16 @@ body {
 
 .testimony {
 	width: 100%;
+	min-height: 35rem; /* Prevent screen jostling when clicking arrow buttons */
 	text-align: justify;
-	display: none; /* Hide by default */		
-	transition: opacity 0.3s ease-in-out;
+	display: none; /* Hide from script by default */	
+	transition: opacity 0.3s ease-in-out; /* Change opacity from opaque to transparent */
+	justify-content: center;
 }
 
 .testimony.active {
-	display: block; /* Show when active */
+	display: flex; /* Show when script makes active */
+	flex-direction: column;
 }
 
 .dog-paw-rating {
@@ -230,9 +244,14 @@ body {
 	width: 2.5rem;
 	height: 2.5rem;
 	padding: 0 0.5rem 0 0.5rem;
-	background: radial-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0) 65%);
+	background: radial-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0) 65%); /* Mimick glow */
 	padding: 1rem;
-	mix-blend-mode: lighten;
+	mix-blend-mode: lighten; /* Soften blending */
+	transition: transform 0.5s ease; /* Set stage for animation */
+}
+
+.dog-paw-rating img:hover {
+	animation: oscillate 0.5s ease forwards; /* Use `oscillate` */
 }
 
 .test-name {
@@ -251,65 +270,57 @@ body {
 
 /* Image gallery -------------------------------------------------- */
 .image-gallery {
-	max-width: 1000px;
-	margin: 1rem auto;
+	max-width: 1000px; /* Disallow width to flush with header */
+	margin: 1rem auto; 
 }
 
 .slideshow {
-	
-	position: relative;
-	overflow: hidden;
-	margin-bottom: 1rem;
+	position: relative; /* Set the stage for absolute positioning of buttons */
+	overflow: hidden; /* Hide images not within gallery viewer */ 
+	margin-bottom: 1rem; /* Add space before next element */
 	box-shadow: 0.1rem 0.1rem 0.25rem #031f3d;
 }
 
 .slideshow .slides {
-	list-style: none;
-	display: flex;
+	list-style: none; /* Remove bullet points */
+	display: flex; /* Arrange images horizontally */
 	margin: 0;
 	padding: 0;
 }
 
 .slideshow .slide {
-	min-width: 100%;
-	transition: opacity 0.3s;
-	position: relative;
+	min-width: 100%; /* Define 1-to-1 slide-to-image ratio */
 }
 
 .slide-image {
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-size: cover; /* Cover the container */
 	background-position: center center;
-	height: 50vh;
+	height: 60vh; /* Set a responsive height */
 	border: solid 0.25rem #80af1e;
 }
 
 .slideshow .arrows {
-	position: absolute;
+	position: absolute; /* Position arrow button containers */
 	top: 0;
 	width: 100%;
 	height: 100%;
-	display: flex;
-	justify-content: space-between;
-	
+	display: flex;	
 }
 
 .slideshow .arrows .arrow {
-	background: transparent;
-	border: none;
-	width: 50%; 
+	background: transparent; /* Hide button background */ 
+	border: none; /* Remove border */
+	width: 50%; /* Enable clickability across the image */
 	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer;
 }
 
 .slideshow .arrows .arrow span {
 	display: block;
-	background-size: contain;
-	background-repeat: no-repeat;
+	background-size: contain; /* Keep arrows within their container */
+	background-repeat: no-repeat; /* Prevent repeating */
 	width: 2rem;
 	height: 3rem;
-	margin: 0;
-	opacity: 0.5;
-	transform: translateY(-1.5rem); 
+	transform: translateY(-1.5rem); /* Fine-tune positional adjustments */ 
 }
 
 .slideshow .arrows .arrow .arrow-next span {
@@ -317,13 +328,13 @@ body {
 }
 
 .slideshow .arrows .arrow span:hover {
-	opacity: 1;
-	transform: scale(1.5, 1.5) translateY(-1rem);
-	transition: transform 0.1s ease-in;
+	opacity: 1; /* "Brighten" arrows with full opacity */
+	transform: scale(1.5, 1.5) translateY(-1rem); /* Enlarge arrows */
+	transition: transform 0.1s ease-in; /* Set transition parameters */
 }
 
 .slideshow .arrow-prev span {
-	position: absolute;
+	position: absolute; /* Position arrow button indicators */
 	background-image: url('../images/svg/left-arrow.svg');
 	left: 3rem;
 }
@@ -336,9 +347,9 @@ body {
 
 /* Footer ------------------------------------------------ */
 footer {
-	max-width: 1600px;
+	max-width: 1600px; /* Keep flush with header */
 	background-color: rgba(3,31,61,0.8);
-	color: #ffffff;
+	color: #ffffff; 
 	margin: 0;
 	padding: 1rem;
 }
@@ -367,7 +378,7 @@ footer {
 }
 
 address {
-	font-style: normal;
+	font-style: normal; /* Remove italics */
 }
 
 .sitemap__columns {
@@ -395,6 +406,7 @@ address {
 	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer;
 }
 
+/* Style the email form, input fields, and send button
 .input-field, .message-field {
 	background-color: #031f3d;
 	color: #ffffff;
@@ -402,7 +414,7 @@ address {
 	padding: 0.5rem;
 	box-shadow: inset 0 0 0.25rem #00ffff;
 	font-size: 2.5vw;
-}
+} 
 
 .input-field:hover, .message-field:hover {
 	cursor: url("../images/cursors/bone-cursor.png"), text;
@@ -434,7 +446,7 @@ address {
 	color: #00ffff;
 	text-decoration: underline;
 	cursor: url("../images/cursors/paw-cursor.png") 16 16, pointer;
-}
+} */
 
 .credits h2 {
 	color: #80af1e;
@@ -443,36 +455,23 @@ address {
 	font-size: 1.5rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Small screen devices ------------------------------------------------ */
 @media (max-width: 551px) {
 	.header {
-		background-position: center right 25%; /* NEW */
-		overflow: hidden;
+		background-position: center right 25%; 
+		overflow: hidden; /* Prevent horizontal scrollbars if screen width becomes narrower than modern devices */
 	}
 	
 	#header-logo {
-		width: 4.75rem; /* NEW */
+		width: 4.75rem; /* Set a minimum width for the company logo */
 	}
 	
 	.header-tags h1 {
-		font-size: 1.57rem; /* NEW */
+		font-size: 1.57rem; /* Set minimum font size */
 	}	
 
 	.header-tags h2 {
-		font-size: calc(1.57rem / 1.5);
+		font-size: calc(1.57rem / 1.5); /* Calculate font size based on header 1 */
 	}
 
 	.trademark {
@@ -487,15 +486,12 @@ address {
 	/* About me ---------------------------------------------------- */
 	.about-me-info {
 		display: flex;
-		flex-direction: column;
+		flex-direction: column; /* Override floating avatar */
 		overflow: hidden;
 	}
 
 	.about-me-info h2 {
-		text-align: center;
-	}
-
-	.about-me-info h2 {
+		text-align: center; /* Align headers horizontally */
 		margin: 1rem 0 0 0;
 	}
 
@@ -511,14 +507,14 @@ address {
 	}
 
 	.dog-paw-rating img {
-		width: 8.25vw;
+		width: 8.25vw; /* Set responsive size for rating "stars" */
 		height: 8.25vw;
 		padding: 3vw;
 	}
 	
 	/* Image gallery -------------------------------------------------- */
 	.slideshow .arrow-prev span {
-		left: 1rem;
+		left: 1rem; /* Leave more room for the image when screen width is narrow */
 	}
 	
 	.slideshow .arrow-next span {
@@ -530,13 +526,15 @@ address {
 		overflow: hidden;
 	}
 	.footer-bottom {
-		flex-direction: column; /* NEW */
+		flex-direction: column; /* Change orientation of elements */
+		text-align: center;
 	}
 
 	.sitemap__columns {
 		font-size: 0.785rem;
 	}
 
+	/* Stylize form 
 	.contact form {
 		display: flex;
 		flex-direction: column;
@@ -549,32 +547,17 @@ address {
 
 	.message-field {
 		height: 5rem;
-	}
-
-	.footer-bottom {
-		text-align: center;
-	}
+	} */
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Large screen devices */
 @media (min-width: 1200px) {
 	.header-tags h1 {
-		font-size: 3.5rem;
+		font-size: 3.5rem; /* Set maximum font size for heading 1 */
 	}
 	
 	.header-tags h2 {
-		font-size: calc(3.75rem / 1.5);
+		font-size: calc(3.75rem / 1.5); /* Calculate font size based on heading 1 */
 	}
 	
 	.trademark {
@@ -582,7 +565,7 @@ address {
 	}
 
 	#header-logo {
-		width: 11.25rem; 
+		width: 11.25rem; /* Set maximum size of company logo */ 
 	}
 
 	.nav-bar {
@@ -593,19 +576,17 @@ address {
 		font-size: 1.875rem;
 	}
 
+	/* Style input fields
 	.input-field, .message-field {
 		font-size: 1.875rem;
-	}
+	} */
 }
-
-
-
 
 /* For browsers that support backdrop filtering */
 @supports (backdrop-filter: blur(1rem)) {
 	.nav-bar {
-		background-color: rgba(3,31,61,0.8);
-		backdrop-filter: blur(1rem); 
+		background-color: rgba(3,31,61,0.8); 
+		backdrop-filter: blur(1rem); /* Blur the page background through a transparent element */ 
 	}
 	
 	.about-me-info { 
