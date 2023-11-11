@@ -42,12 +42,12 @@ html {
 	align-items: center; /* Align items vertically */
 }
 
-#header-logo {
+#headerLogo {
 	width: 15vw; /* Set responsive sizing parameter */
 	padding: 1rem 1rem 1rem 0; /* Add padding on all but right side */
 }
 
-#header-logo:hover {
+#headerLogo:hover {
 	animation: oscillate 1.2s ease forwards; /* Use `oscillate` */
 }
 
@@ -119,7 +119,7 @@ body {
 	max-width: 14rem; /* Prevent oversizing */
 }
 
-#avatar-image {
+#avatarImage {
 	max-width: 100%; /* Keep image within container */
 	border: 0.25rem solid #80af1e; /* Define border width, style, and color */
 	box-shadow: 0.1rem 0.1rem 0.25rem #031f3d; /* Define X- and Y-axis offset, blur radius, and color of shadow */
@@ -462,7 +462,7 @@ address {
 		overflow: hidden; /* Prevent horizontal scrollbars if screen width becomes narrower than modern devices */
 	}
 	
-	#header-logo {
+	#headerLogo {
 		width: 4.75rem; /* Set a minimum width for the company logo */
 	}
 	
