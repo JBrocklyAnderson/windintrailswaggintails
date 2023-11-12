@@ -47,9 +47,10 @@ html {
 	padding: 1rem 1rem 1rem 0; /* Add padding on all but right side */
 }
 
+/* Comment out company logo animation
 #headerLogo:hover {
-	animation: oscillate 1.2s ease forwards; /* Use `oscillate` */
-}
+	animation: oscillate 1.2s ease forwards;
+} */
 
 .header-tags h1, .header-tags h2 {
 	font-family: 'Playpen Sans';
@@ -78,6 +79,7 @@ html {
 	background-color: rgba(3,31,61,0.8);
 	font-family: 'Playpen Sans';
 	font-size: 2.5vw;
+	text-shadow: 0.1rem 0.1rem 0.5rem #031f3d;
 }
 
 .nav-bar a {
@@ -388,6 +390,7 @@ address {
 	font-size: 2.5vw;
 	justify-content: center;
 	font-family: 'Playpen Sans';
+	text-shadow: 0.1rem 0.1rem 0.5rem #031f3d;
 }
 
 .sitemap__columns .column {
